@@ -10,12 +10,7 @@ plugins {
     id 'com.github.kt3k.coveralls' version '2.8.1'
 }
 
-jacocoTestReport {
-    reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
-    }
-}
+
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: "jacoco"
@@ -39,6 +34,12 @@ dependencies {
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
+}
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
 }
 
 // Define the main class for the application
