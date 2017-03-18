@@ -8,7 +8,7 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
-
+apply plugin: "jacoco"
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
@@ -18,7 +18,11 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
-
+jar {
+    manifest {
+       attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
+    }
+}
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:20.0'
