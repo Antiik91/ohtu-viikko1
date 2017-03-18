@@ -141,8 +141,8 @@ public class VarastoTest {
    @Test
    public void testaaTostring() {
        Varasto test = new Varasto(33, 10);
-       //String toTest = "saldo = 10.0, vielä tilaa 23.0";
-       String toTest = "saldo = 10.0, vielä tilaa 22.0";
+       String toTest = "saldo = 10.0, vielä tilaa 23.0";
+       //String toTest = "saldo = 10.0, vielä tilaa 22.0";
        assertEquals(toTest, test.toString());
    }
 }
